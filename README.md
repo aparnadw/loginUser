@@ -20,6 +20,10 @@
   7) Edit profile
   8) image uplode (single image uplode)
   9) multipale image uplode (TaskCreategallery or taskGallery )
+   for run this 
+    in app.js change
+   // app.use('/', appControler);
+      app.use('/', task);
  
  run cmd 
  nodemon aap.js
