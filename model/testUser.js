@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 var validator = require('validator');
-
+// for pagination
 const UserSchema = new mongoose.Schema({
 
     id: {
@@ -19,14 +19,7 @@ const UserSchema = new mongoose.Schema({
         type: String
     },
 })
-// {
-//     "_id" : ObjectId("5d358947ee91110cc0cef3e7"),
-//     "id" : 1,
-//     "first_name" : "Lisle",
-//     "last_name" : "Itscowicz",
-//     "email" : "litscowicz0@unblog.fr",
-//     "gender" : "Male"
-// }
+
 const users= mongoose.model("users" , UserSchema);
 
 module.exports = users;
