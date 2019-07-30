@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </header>
+    <body>
+    <div class="content-wrapper" style="margin-top: 30px;">
+    <!-- Main content -->
+    <section class="content">
+       
+        <form action="/profile" method="POST" enctype="multipart/form-data" id="edit_profile">
+        
+            <div class="box box-danger">
+                <div class="box-body">
+                             
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Name:<span style="color:red;">*</span> : </label>
+                            <div class="col-sm-7">  
+                                 <input type="text" name="name" class="form-control" value="<%- User.name %>"  data-rule-required="true" data-msg-required="Please enter your username.">
+                            </div>                            
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Email:<span style="color:red;">*</span> : </label>
+                            <div class="col-sm-7">  
+                                 <input type="text" name="email" id="email" class="form-control"  value="<%- User.email %>"  data-rule-required="true" data-msg-required="Please enter your email." data-rule-email="true" data-msg-email="Please enter valid email." >
+                                
+                            </div>                            
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Profile Image: </label>
+                            <div class="col-sm-7">  
+                                 <input type="file" name="photo" id="image" class="form-control" accept="image/*" title="image" >
+                            </div>                            
+                        </div>
+
+                        <input type="hidden" value="<%- User.profile %>" name="oldimage">
+
+                        <img src="../profile/<%- User.profile %>" height="200" width="200" style="margin: 20px">
+                                                  
+                        </div>
+                         <div class="form-group">
+                            <div class="col-sm-7">
+                                <input type="submit" name="submit" id="submit" class="btn btn-success"  value="Update">
+                                 <a class="btn btn-warning" href="/">Close</a>
+                                 <a class="btn btn-info" href="/multiUplods">multi Uplode</a>
+                                 <a class="btn btn-light" href="/logout">log out </a>
+                            </div>                            
+                        </div> 
+                            </div>
+                        </div>                                    
+                        
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </section>
+
+</div>
+<script type="text/javascript"src="/assets/js/jquery.validate.min.js"></script>
+</body>
+</html>

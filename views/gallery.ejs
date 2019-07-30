@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="/css/profil.css" rel="stylesheet" type="text/css">
+    </header>
+    <body>
+        <div class="container" >
+            <h4 style="margin-top: 30px">Gallery</h4>
+            <%= User.UserName %>
+            <div class="form-group">
+            <form method="POST" action="/gallerys" enctype="multipart/form-data">
+               <% User.image.forEach(function(img){  %>
+                <img src="../profile/<%- img %>" height="200" width="200" style="margin: 20px">                                   
+               <% }) %>
+               <input type="submit" name="submit" value="no action " class="btn btn-success">
+                <a class="btn btn-light" href="/logout">log out </a>
+            </form>
+            </div>
+        </div>
+
+       </body>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+</html>

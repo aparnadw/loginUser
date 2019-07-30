@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <table style="width:100%">
+                    <tr>
+                            <th>First name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                        </tr>
+            <% users.forEach(function(user){ %>
+                <div class="col-md-4">
+                    <tr>
+                            <td><%= user.first_name %></td>
+                            <td><%= user.last_name %></td>
+                            <td><%= user.email %></td>
+                            <td><%= user.gender %></td>
+                    </tr>
+                            
+                </div>
+            <% }) %>
+            </table>
+        </div>
+        <% if(pages > 0) { %>
+            <ul class="pagination text-center">
+                    <% for(i= 1; i <= pages ; i++) { %>
+                        <% if(i == current) {%>
+                            <li class="active"><a><%= i %></a></li>
+                        <% } else { %>
+                            <li><a href="/products/<%= i %>"><%= i %></a></li>
+                        <% } %>
+                           
+                        <% } %>
+            </ul>
+        <% } %>
+        <br>
+    </div>
+     
+    </div>
+</body>
+</html>
