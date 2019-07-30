@@ -1,12 +1,12 @@
 # loginUser
- install nodejs
- npm i express
- npm i body-parser
- npm i mongoose
- npm i ejs
- npm i multer
- npm i express-flash
- npm i nodemon
+ 1) install nodejs
+ 2) npm i express
+ 3) npm i body-parser
+ 4) npm i mongoose
+ 5) npm i ejs
+ 6) npm i multer
+ 7) npm i express-flash
+ 8) npm i nodemon
  
  
  
@@ -21,7 +21,6 @@
   8) image uplode (single image uplode)
   9) multipale image uplode (TaskCreategallery or taskGallery )
  
- run cmd
- 
+ run cmd 
  nodemon aap.js
  
